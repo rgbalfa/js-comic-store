@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Comic Store</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css-bs/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js-bs/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="css-bs/carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Firebase: Real Time Comics</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li href="#/indexBy/genre/all"><a href="#">Genres</a></li>
+                <li href="#/indexBy/characters"><a href="#">Characters</a></li>
+                <li href="#/indexBy/editions"><a href="#">Editions</a></li>
+                <li href="#/news"><a href="#">News</a></li>
+                
+                <li >
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+          <li><a href="#about">About</a></li>
+                    <li class="divider"></li>
+          <li><a href="#contact">Contact</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="img/ad-banner-1.jpg" alt="First slide">
+        </div>
+        <div class="item">
+          <img src="img/ad-banner-2.jpg" alt="Second slide">
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <div class="container marketing">
+
+      <div class="row">
+        <div class="col-lg-8" id="main-content">
+    <h1>Welcome Back</h1>
+      <p class="lead">Welcome to our Comic Store, for this month we recommend this clasics:</p>
+      <div class="asset-teaser">
+        <img class="img-comic" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 200px; height: 200px; float: left; clear: none;">
+        <div style="width: 54%; float:left; clear: right; margin-left: 3%; margin-right: 3%;">
+          <h2 style="margin-top: 0;">Avengers Comic #234</h2>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+        </div><!-- /.col-lg-8 -->
+        <div class="col-lg-4">
+      
+      <h2>Popular Comics</h2>
+      <h3>Top Scored (from firebase)</h3>
+      <div id="top-score"></div>
+      <h3>Top Searched (from firebase)</h3>
+      <div id="top-search"></div>
+      <h3>Top Recommended (from firebase)</h3>
+      <div id="top-recommended"></div>
+      <div></div>
+          <pre>
+          
+<b>todo</b>
+F7:  Genres
+  Editions
+  News
+  Character
+F8: Search comics
+  Advanced search
+F9: borrow for clients
+F10: My account
+F13: borrowing for admin
+F12: admin users
+  admin comics
+      </pre>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js-bs/jquery-1-11-1.min.js"></script>
+    <script src="js-bs/bootstrap.min.js"></script>
+    <script src="js-bs/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js-bs/ie10-viewport-bug-workaround.js"></script>
+  <script src="js/underscore.js"></script>
+  
+  <script src="js/backbone.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/backbonefire/0.5.0/backbonefire.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/models/comic-m.js"></script>
+  <script src="js/collections/comic-c.js"></script>
+  <script src="js/views/comic-v.js"></script>
+  <script src="js/routers/routers.js"></script>
+  
+  <script type="text/template" id="tpl-comic-quick-list-item">
+  <a href="#node/<%= data.title %>" ><%= data.title %> </a>
+  <div>score: <%= data.score %>
+  , searches: <%= data.searches %>, recommendations: <%= data.recommendations %>
+  </div>
+  </script>
+  <!--
+  -->
+
+  </body>
+</html>
